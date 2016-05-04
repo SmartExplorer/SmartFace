@@ -1,10 +1,8 @@
-// Ionic Starter App
-
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('smartface', ['ionic', 'smartface.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -32,28 +30,28 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.tv', {
+    url: '/tv',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/tv.html'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.aircon', {
+      url: '/aircon',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/aircon.html'
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.vacuum', {
+      url: '/vacuum',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
+          templateUrl: 'templates/vacuum.html',
           controller: 'PlaylistsCtrl'
         }
       }
@@ -69,5 +67,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/vacuum');
 });
